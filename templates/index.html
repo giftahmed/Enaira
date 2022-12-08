@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eNaira Analysis System</title>
+    <link rel="stylesheet" href="enaira.css">
+
+    <style>
+        *,
+::after,
+::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar{
+    width: 15px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: green;
+}
+
+body {
+    background-color: whitesmoke;
+    font-family: serif;
+    text-align: justify;
+}
+
+.container{
+    width: 85%;
+    margin: auto;
+}
+
+.head h1 {
+    font-size: 4rem;
+    color: #fff;
+    text-align: center;
+    padding-top: 15%;
+    width: 40%;
+    margin: auto;
+}
+
+header {
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('../static/bg_1.webp');
+    height: 100vh;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+}
+
+header h3{
+    color:#fff;
+    font-size: 2rem;
+    padding: 10rem 0 0 5rem;
+}
+
+section{
+    padding: 3rem 0;
+}
+
+.intro{
+    line-height: 1.5;
+    font-size: 1.5rem;
+}
+
+textarea{
+    width: 50%;
+    margin-top: 3rem;
+    margin-left: 2.3rem;
+    padding: 10px;
+    font-size: 1.3rem;
+    display: block;
+}
+
+.btn{
+    margin: 2rem;
+    padding: 10px;
+    font-size: 1.3rem;
+    background-color: #fff;
+}
+
+.btn:hover{
+    background-color: green;
+    color: #fff;
+}
+
+.pred{
+    padding-top: 3rem;
+    margin-left: 2.3rem;
+}
+
+.pred p{
+    border: 1px solid black;
+    width: 30%;
+    padding: 1rem;
+}
+
+footer {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../static/bg_3.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 2rem;
+}
+
+.col{
+    color: #fff;
+    padding: 15px;
+    font-size: 50%;
+    margin-top: 7rem;
+}
+
+.col:hover{
+    background-color: rgba(0,0,0,0.8);
+    padding: 15px;
+    transition: .3s ease-in-out;
+}
+
+footer h3{
+    font-size: 2rem;
+    padding-bottom: 1rem;
+}
+
+footer p{
+    color: #fff;
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+p {
+    font-size: 20px;
+    color: rgb(12, 70, 12);
+}
+
+.text-center{
+    text-align: center;
+    margin-top: 6rem;
+    font-size: 1rem;
+}
+
+/* ###### Responsive design for tab begins here ######## */
+@media screen and (min-width: 600px) and (max-width: 900px) {
+    .head h1 {
+        font-size: 3rem;
+        color: #fff;
+        text-align: center;
+        padding-top: 50%;
+        width: 70%;
+    }
+   
+    header h3{
+        color:#fff;
+        font-size: 1.5rem;
+        padding: 20rem 0 0 2rem;
+    }
+   
+    textarea{
+        width: 100%;
+        margin: auto;
+        margin-top: 3rem;
+        padding: 10px;
+    }
+    
+    .btn{
+        margin: 2rem 0;
+    }
+    
+    .pred{
+        margin-left: 0rem;
+        width: 100%;
+    }
+    
+    .pred p{
+        width: 50%;
+    }
+    
+    .grid{
+        display: grid;
+        margin-top: 5rem;
+        grid-template-columns: 1fr;
+        grid-gap: .5rem;
+    }
+    
+    .col{
+        color: #fff;
+        padding: 15px;
+        margin-top: .5rem;
+    }
+    
+    .col:hover{
+        background-color: rgba(0,0,0,0.8);
+        padding: 15px;
+        transition: .3s ease-in-out;
+    }
+    
+    footer h3{
+        font-size: 1.5rem;
+        padding-bottom: 1rem;
+    }
+    
+    footer p{
+        color: #fff;
+        font-size: 1.5rem;
+        line-height: 1.2;
+    }
+    
+    .text-center{
+        text-align: center;
+        margin-top: 3rem;
+        font-size: 1rem;
+    }
+}
+/* ###### Responsive design for tab ends here ######## */
+
+
+/* ###### Responsive design for mobile begins here ######## */
+@media screen and (min-width: 300px) and (max-width: 599px) {
+    .head h1 {
+        font-size: 2rem;
+        padding-top: 80%;
+        width: 90%;
+    }
+   
+    header h3{
+        color:#fff;
+        font-size: 1.5rem;
+        padding: 20rem 0 0 2rem;
+    }
+   
+    .info{
+        font-size: 2rem;
+    }
+
+    textarea{
+        width: 100%;
+        margin: auto;
+        margin-top: 3rem;
+        padding: 10px;
+        font-size: 1rem;
+    }
+    
+    .btn{
+        margin: 2rem 0;
+        font-size: 1rem;
+    }
+
+    .pred{
+        margin-left: 0rem;
+    }
+    
+    .pred p{
+        width: 85%;
+    }
+    
+    .grid{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: .5rem;
+    }
+    
+    .col{
+        color: #fff;
+        padding: 15px;
+        margin-top: .5rem;
+    }
+    
+    .col:hover{
+        background-color: rgba(0,0,0,0.8);
+        padding: 15px;
+        transition: .3s ease-in-out;
+    }
+    
+    footer h3{
+        font-size: 1.5rem;
+        padding-bottom: 1rem;
+    }
+    
+    footer p{
+        color: #fff;
+        font-size: 1rem;
+        line-height: 1.2;
+    }
+    
+    .text-center{
+        text-align: center;
+        margin-top: 3rem;
+        font-size: .9rem;
+    }
+}
+/* ###### Responsive design for mobile ends here ######## */
+
+    </style>
+</head>
+<body>
+
+    <!-- <img id="headerimage" src="enaira1.jpg" alt="enaira image"> -->
+    <header>
+        <div class="contianer">
+            <div class="head">
+                <h1>ENAIRA REVIEW ANALYTIC SYSTEM</h1>
+
+            </div>
+            <h3>
+                By <br> Dekanu Diana Nkechi 
+            </h3>
+        </div>
+    </header>
+       
+        <section>
+            <div class="container">
+                <p class="intro">
+                    The eNaira is a digital currency that was introduced and launched by the federal government at the state house in Nigeria in late 2021. It is a central bank digital currency (CBDC) and the first ever launched in Africa. The eNaira digital currency came to light shortly after the federal government banned the use of cryptocurrency for online transactions in Nigeria. The federal government believed that cryptocurrency is not safe and secure for business transactions as it poses a threat to the financial system of the country. The federal government did not leave that vacuum empty as it ensured that the use of cryptocurrency in Nigeria was replaced with a more secure way of performing transactions online that does not threaten the financial system but rather enhances quick, safe and efficient payments online. This secure and stress less transaction method is the use of the eNaira digital currency. Although Nigeria is not the first country to issue a CBDC, countries such as China and the United Kingdom have launched their Digital Yuan and Bitcoin respectively. Nigeria, on the other hand, is ahead of the pack in terms of Block chain and e-currency adoption in Africa.
+
+                </p>
+                <form id="first" action="{{url_for('result')}}" method="POST">
+
+                    <!-- <input class="placehold" type="text" name="Enter review on eNaira here" placeholder="Enter your review on eNaira here" required="required"/> <br> -->
+
+                    <textarea id="" name="message" cols="30" rows="10"  placeholder="Enter your review on eNaira here..." required="required"></textarea>
+
+                    <button type="submit" class="btn">Predict your review here</button>
+                </form>
+
+                
+                <div class="pred">
+                    <p> {{result}} </p>
+                </div>
+            </div>
+        </section>
+        
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="grid">
+                <div class="col">
+                    <h3>(Oladipo et al. 2020)</h3>
+                    <p>Oladipo and others centred on identifying and extracting abusive words on the web.The authors proposed the development of a corpus of online users' comments annotated for abusive language and the development of a classification ML model to detect hate speech on the Nigerian web. The machine learning algorithms that were employed were SVM, NB, LR, XG and they gave accuracies of 90%, 84%, 84.3% and 0.73% respectively. SVM gave the highest accuracy.
+                    </p>
+                </div>
+                <div class="col">
+                    <h3>(Dulău & Dulău, 2019)</h3>
+                    <p>The existing system for this project is Cryptocurrency-Sentiment Analysis in Social Media.This project is concerned with building a model that can perform sentiment analysis on five different cryptocurrencies. The result of this analysis using Stanford CoreNLP showed that the negative, neutral and positive words are 2909, 3295 and 1127 respectively. On the other hand, IBM Watson showed 1954, 3650 and 1723 of negative, neutral and positive sentiments respectively . 
+                    </p>
+                </div>
+                <div class="col">
+                    <h3>(Tiwari & Singh, 2019)</h3>
+                    <p>To perform sentiment analysis on twitter data, Tiwari and Singh employed the ensemble approach. After the use of techniques like stemming, Lemmatization, and Tokenization for data pre-processing, they suggested the ensemble method to improve the accuracy of prior classification algorithms. Firstly, Decision Tree, Kneighbor and Naive Bayes classifiers were employed and they yielded 63%, 67% and 69% respectively which do not give better accuracy.
+
+                    </p>
+                </div>
+            </div>
+
+            <p>
+                <p class="text-center">
+                    Copyright ©
+                    <script>document.write(new Date().getFullYear());</script> All rights reserved
+                </p>
+            </p>
+        </div>
+    </footer>   
+</body>
+</html>
